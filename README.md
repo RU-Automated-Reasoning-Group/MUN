@@ -16,7 +16,7 @@ If you find our paper or code useful, please reference us:
 
 ## Model-based GCRL Framework:
 
-![General MBRL](Resources/APS_img1.png)
+<img src="Resources/APS_img1.png" alt="General MBRL" width="500" />
 
 The richness of environment space and dynamics captured by the replay buffer sets the upper limit for what the world model can learn about the real world. It also significantly influences the training level of the policy.
 
@@ -27,31 +27,39 @@ Previous Replay Buffer: One-way direction
 
 Our Method (MUN)’s Replay Buffer: Two-way direction 
 
-![MUN WM](Resources/APS_img4.png)
+<img src="Resources/APS_img4.png" alt="MUN WM" width="500" />
 
 ## Key Subgoal
 
 During the trajectory evolution towards the agent's goal, there often exist certain states termed as key subgoal states. 
 
-![MUN Subgoals](Resources/APS_img3.png)
+<img src="Resources/APS_img3.png" alt="MUN Subgoals" width="500" />
 
 We observed that key subgoal states typically correspond to actions with significant differences. So we designed DAD alogorithm to find key subgoal states.
   
 Some key subgoals found by DAD:
-![MUN Subgoals found](Resources/APS_img5.png)
+
+<img src="Resources/APS_img5.png" alt="MUN Subgoals found" width="500" />
+
 
 ## Experiments results
 
+MUN trains better policies in different tasks compared with other baselines:
+
+<img src="Resources/success rate.png" alt="MUN Success" width="500" />
+
+
 Success rate of MUN crossing different key subgoal pairs:
 
-![MUN Results](Resources/APS_img6.png)
+<img src="Resources/APS_img6.png" alt="MUN Results" width="500" />
+
 
 ## Code Structure
 
 ```
 MUN/
-  |- Config/              # config file for each environment.
-  |- dreamerv2_APS/       # MUN implement
+  |- Config/                        # config file for each environment.
+  |- dreamerv2_APS/                 # MUN implement
   |- dreamerv2_APS/gc_main.py       # Main running file
 ```
 
